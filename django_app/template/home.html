@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block nav %}
+{% endblock %}
+
+{% block main %}
+
+<div class="main">
+
+
+
+	<div class="container1">
+	<div class="row">
+        {% for duct in ducts %}
+	<div class="column">
+
+			<div class="img"><img src="{{duct.img.url}}" alt=""></div>
+            <h2>{{duct.name}}</h2><br>
+			<h2>{{duct.desc}}</h2><br>
+			<h2>{{duct.price}}</h2><br>
+			{% if duct.offer %}
+			<h2 style=""><strike>LE  {{duct.price}}</strike>
+				LE  {{duct.sale_price}}  Now</h2>
+
+		<h2 style="background:magenta;color:white;"><center>* sale !!!! *</center></h2>
+
+			{% endif %}
+	</div>
+
+	{% endfor %}
+
+	</div>
+</div>
+
+	</div>
+{% endblock %}
+
+{% block nav1 %}
+{% endblock %}
+
+

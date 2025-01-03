@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+{% if searched %}
+
+
+<h1>You search for  {{searched}}</h1>
+
+<br>
+
+
+{% for product in product %}
+<h2 style="color:red;">{{product.name}} <br> {{product.desc}} <br> <strike style="color:green;">LE   {{product.price}}</strike>  {{product.sale_price}}  LE Now</h2><br>
+{% endfor %}
+
+{% else %}
+
+<h1>Hey! You forgot to search for...........</h1>
+
+{% endif %}
+
+
+
+</body>
+</html>
